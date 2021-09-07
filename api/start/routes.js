@@ -21,4 +21,4 @@ Route.get('/', 'HomeController.home')
 Route.get('/users', 'UserController.all').middleware('auth')
 Route.post('/users', 'UserController.create')
 
-Route.post('/login', 'SessionController.create')
+Route.post('/login', 'LoginController.create')
