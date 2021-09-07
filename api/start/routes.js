@@ -18,6 +18,7 @@ const Route = use('Route')
 
 Route.get('/', 'HomeController.home')
 
+Route.get('/users', 'UserController.all').middleware('auth')
 Route.post('/users', 'UserController.create')
 
 Route.post('/login', 'SessionController.create')
