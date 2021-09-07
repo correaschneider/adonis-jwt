@@ -1,0 +1,8 @@
+version: "3.7"
+
+services:
+  api:
+    build:
+      context: ./docker/node
+      dockerfile: Dockerfile
+    image: api:adonis-4.1
