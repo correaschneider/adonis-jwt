@@ -49,7 +49,18 @@ services:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
 
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    ports:
+      - 92:80
+    volumes:
+      - pgadmin:/var/lib/pgadmin:delegated
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+
 volumes:
+  pgadmin:
   api_node_modules:
   db_volume:
   log_volume:
