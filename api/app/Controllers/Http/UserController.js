@@ -3,7 +3,7 @@
 const User = use('App/Models/User')
 
 class UserController {
-  async all ({ request }) {
+  async all () {
     const users = await User.all()
 
     return users

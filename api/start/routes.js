@@ -23,3 +23,4 @@ Route.post('/users', 'UserController.create')
 
 Route.post('/login', 'LoginController.create')
 Route.get('/login', 'LoginController.refresh').middleware('auth')
+Route.get('/logout', 'LoginController.logout')
